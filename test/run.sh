@@ -120,6 +120,7 @@ if [[ ($TEST_PATTERN == "") ]]; then
   popd > /dev/null
 fi
 
+# All tests in css_compile use a set of widgets in css_compile/lib/components. 
 echo -e "$DIR/data/input/css_compile"
 pushd $DIR/data/input/css_compile > /dev/null
 echo -e "\nRemoving css_compile packages..."
