@@ -67,19 +67,20 @@ main() {
       'data/input/css_compile/expected',
       'data/input/css_compile/out',
       ['--no-css-mangle',
-       '--css-reset', 'data/input/css_compile/reset.css'], null, '^index_test');
+       '--css-reset', 'data/input/css_compile/reset.css'],
+      null, 'index_test\.html');
   renderTests('data/input/css_compile',
       'data/input/css_compile',
       'data/input/css_compile/expected',
       'data/input/css_compile/out',
       ['--no-css-mangle',
        '--css-reset', 'data/input/css_compile/full_reset.css'],
-      null, '^index_reset_test');
+      null, 'index_reset_test\.html', false);
   renderTests('data/input/css_compile',
       'data/input/css_compile',
       'data/input/css_compile/expected',
       'data/input/css_compile/out',
-      ['--no-css'], null, '^index_shadow_dom');
+      ['--no-css'], null, 'index_shadow_dom_test\.html', false);
   exampleTest('../example/component/news');
   exampleTest('../example/todomvc', ['--no-css']);
 }
