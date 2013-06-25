@@ -120,6 +120,14 @@ if [[ ($TEST_PATTERN == "") ]]; then
   popd > /dev/null
 fi
 
+echo -e "$DIR/data/input/css_compile"
+pushd $DIR/data/input/css_compile > /dev/null
+echo -e "\nRemoving css_compile packages..."
+rm -rf packages
+echo -e "\npub install css_compile..."
+pub install
+popd > /dev/null
+
 pushd $DIR > /dev/null
 echo -e "\nRunning unit tests... "
 dart $DART_FLAGS run_all.dart $TEST_PATTERN || compare_all
