@@ -1,8 +1,0 @@
-name:  widgets
-version: 0.1.0-test
-description:  Shared components for css_compile
-dependencies:
-  html5lib: any
-  web_ui: any
-environment:
-  sdk: any

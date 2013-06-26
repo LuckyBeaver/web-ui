@@ -120,20 +120,10 @@ if [[ ($TEST_PATTERN == "") ]]; then
   popd > /dev/null
 fi
 
-# All tests in css_compile use a set of widgets in css_compile/lib/components. 
-echo -e "$DIR/data/input/css_compile"
-pushd $DIR/data/input/css_compile > /dev/null
-echo -e "\nRemoving css_compile packages..."
-rm -rf packages
-echo -e "\npub install css_compile..."
-pub install
-popd > /dev/null
-
 pushd $DIR > /dev/null
 echo -e "\nRunning unit tests... "
 dart $DART_FLAGS run_all.dart $TEST_PATTERN || compare_all
 popd > /dev/null
-
 
 # Run Dart analyzer to check that we're generating warning clean code.
 # It's a bit slow, so only do this for TodoMVC and html5_utils tests.
